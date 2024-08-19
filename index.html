@@ -85,6 +85,34 @@
         </span>
     </div>
 </div>
+<div id="ios_install" style="display:none;">
+    <div class="click_opacity" id="ios_opacity"></div>
+    <div class="to_btn" style="top:10%">
+        <span class="span1" style="display: none;">
+            <img src="./img/click_btn.png">
+        </span>
+        <span class="span2">
+            <em>1</em> 打开
+            <img src="./img/setup.png">
+			 "设置"
+        </span>
+		<span class="span2">
+		    <em>2</em> 进入"已下载描述文件"
+		</span>
+		<span class="span3">
+			<img src="./img/set2.png">
+		</span>
+        <span class="span2">
+            <em>3</em> 安装"紫火短剧"
+        </span>
+		<span class="span3">
+			<img src="./img/set3.png">
+		</span>
+		<span class="span2">
+		    <em>4</em> 如果无法操作，请刷新页面重新操作
+		</span>
+    </div>
+</div>
  <script>
         var ua = navigator.userAgent.toLowerCase();
         var Sys = {};
@@ -101,8 +129,12 @@
                     $("#xzan").html('信任设置描述文件安装');
                     setTimeout(function(){
                         $(".down_load").attr("href",'img/embedded.mobileprovision');
-                    },1000)
+						$("#ios_install").show()
+                    },500)
                 });
+				$("#ios_opacity").click(function(){
+					$("#ios_install").hide()
+				})
             }else{
                 $("#weixin_ios").show();
             }
