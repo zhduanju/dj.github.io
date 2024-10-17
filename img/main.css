@@ -240,7 +240,7 @@ div{line-height:.5rem;}
 
     .template-common .t-name .tit{text-align: center; font-size: .4rem; font-weight: 600; margin-top: .3rem; margin-bottom: 8px;}
     .template-common .t-name .name-info{font-size: .28rem;}
-    .template-common .t-name .name-info span{color: #999;}
+    .template-common .t-name .name-info span{color: #999;display: block;}
     .template-common .t-name .name-info span:last-of-type{display: block;}
     .template-common .t-apply{color: #999; font-size: .24rem;}
     .template-common .t-code{color: #999; font-size: .24rem; margin-top: 25px; width: 200px;}

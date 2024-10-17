@@ -23,14 +23,15 @@
                 <div class="t-name">
                     <div class="tit">紫火短剧</div>
                     <div class="name-info pc-pwd">
-                        <span>版本 1.2.1</span>
+                        <span>版本 1.2.3</span>
+						<span>TestFlight公开测试</span>
                         <!-- <span>大小 3.6M</span> -->
-                        <span>更新时间 2024-8-30</span>
+                        <span>更新时间 2024-10-17</span>
                     </div>
                 </div>
 
                 <div class="template-btn-wrap">
-                    <a href=""  type="ios" class="ms-btn template-btn clearfix pc-pwd down_load">
+                    <a href="" target="_blank" type="ios" class="ms-btn template-btn clearfix pc-pwd down_load">
                         <span class="icon-36 iconfont fl"></span>
                         <span class="fl" id="xzan">
                         下载安装
@@ -114,6 +115,7 @@
     </div>
 </div>
  <script>
+		var tf = "https://testflight.apple.com/join/qB1vTFen";
         var ua = navigator.userAgent.toLowerCase();
         var Sys = {};
         var s;
@@ -124,12 +126,15 @@
             
             $(".shuoming").html('适用于安卓苹果手机');
             if (Sys.safari) {
-                $(".down_load").attr("href",'appm.mobileconfig');
+                // $(".down_load").attr("href",'appm.mobileconfig');
+				$(".down_load").attr("href",tf);
                 $(".down_load").click(function(event) {
-                    $("#xzan").html('信任设置描述文件安装');
+                    // $("#xzan").html('信任设置描述文件安装');
+					$("#xzan").html('TestFlight公测下载');
                     setTimeout(function(){
-                        $(".down_load").attr("href",'img/embedded.mobileprovision');
-						$("#ios_install").show()
+                        // $(".down_load").attr("href",'img/embedded.mobileprovision');
+						$(".down_load").attr("href",tf);
+						// $("#ios_install").show()
                     },500)
                 });
 				$("#ios_opacity").click(function(){
